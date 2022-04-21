@@ -16,7 +16,24 @@ const { Stack, Queue } = require("../estructuras")
 
 
 function efectoEspejo(str){  
-//tu codigo aqui
+//tu codifunction efectoEspejo(str){
+
+const reverse = new Stack()
+
+let temp = '';
+
+for (let i = 0; i < str.length; i++) {
+    if(str[i] === ' ') {
+        while(reverse.size() > 0){
+           temp += reverse.pop(); 
+        }
+        temp += str[i]
+    }  else {
+        reverse.push(str[i])
+    }
+}
+while(reverse.size() > 0) temp += reverse.pop(); 
+return temp
 
 
 };

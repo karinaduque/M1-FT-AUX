@@ -18,13 +18,25 @@
 // Importante!: Aquellas personas que no cumplan con los requisitos para ingresar deben ser removidos de la cola 
 
 var controlAcces = function(queue, event){
-    // Tu código aca:
-
-  };
-      
   
+  let arr=[];
+  let access =[];
+  while(queue.size()){
+    let subject= queue.dequeue();
+    if(
+      subject.age>=18 &&
+      subject.ticket.event=== event &&
+      !acc.includes(subject.ticket.number)
+      ){
+        access.push(subject.ticket.number)
+      arr.push(subject.fullname)
+    }
+  }
+  return arr
+}
+
+
 
   module.exports = {
     controlAcces,
-   
-}
+  }
